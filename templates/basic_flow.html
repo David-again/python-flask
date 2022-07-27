@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Flask App</title>
+</head>
+<body>
+    <h1>Welcome to this site!</h1>
+    If there is a list from Python, it is enumerated below: 
+    <!-- <h2>{{my_list}}</h2> -->
+    <ul>
+    {% for item in my_list: %}
+        <li> {{item}} </li>
+    {% endfor %}
+    </ul>
+
+    {% for cur_dog in dogs %}
+        {% if cur_dog == "Zoey" %}
+                <h3>Found you {{ cur_dog }} !!!</h3>
+        {% else %}
+                <h4>{{ cur_dog }} was not found </h4>
+        {% endif %}
+    {% endfor %} 
+    <!-- To use the Flask Snippets extension, type 'ffor', 'fife', etc -->
+</body>
+</html>
