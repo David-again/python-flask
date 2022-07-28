@@ -46,6 +46,15 @@ Just begin by typing 'f' and sort through the options.
 
 #### 2.3 Template Inheritance
 Multiple pages re-use the same template, because of parts that they have in common, such as navbar, footer, etc...
-- `{% extend "base.html" %}`
-- `{% block %}`
+Scenario: `02-base.py` is the script; `02-base.html` is the base template; `02-home.html` and `02-puppy.html` are 2 other pages that 'extend' the base file
+
+The base file (e.g. base.html) contains the flask block: 
+-    `{% block content %}`
+-    `{% endblock %}`
+<!-- Use fblock for the above. -->
+
+The home.html file contains the `extends` line, as well as the block syntax and the unique code.
+- `{% extends "base.html" %}`
+- `{% block content %}`
+- `{% endblock %}`
 
