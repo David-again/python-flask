@@ -2,6 +2,14 @@
 
 {% block content %}
 <h3> This is the page for {{ name }} </h3>
+<!-- Linking local files using url_for() -->
+<a href=" {{ url_for('static', filename='puppy_pic.jpg') }} "></a>
+<!-- Again, use furl 
+        Also, note that url_for() takes 2 arguments here: 
+        1. The folder name as a string
+        2. The filename
+-->
+
 {% endblock %}
 
 
